@@ -19,6 +19,7 @@ github在过去的几年里取得了很大的进展。开发者不断的推动Gi
 
 * 然后建立一个仓库<br />
 ![02](/img/firstBlog/02.jpg)
+
 > Respository name(仓库名)必须是you_user_name.github.io
 
 * 接着仓库实际上已经建好了，但网络上的其他教程都会说需要布置ssh的key。我是直接使用github for window的客户端的，安装成功后再登陆自己的github账号就可以自动生成ssh key了，省去了一大步骤。[github for window](https://desktop.github.com/)

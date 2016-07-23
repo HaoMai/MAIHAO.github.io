@@ -1,9 +1,9 @@
 ﻿# Site settings
-title: Your Blog
-SEOTitle: 麦灏的博客 | MAIHAO Blog
+title: MAI HAO Blog
+SEOTitle: 麦灏的博客 | MAI HAO Blog
 header-img: img/home-bg.jpg
 email: 1945646695@qq.com
-description: ""
+description: "来自中山大学的程序猿，奋斗雅思ING"
 keyword: ""
 url: "http://maihao1995.github.io"              # your host, for absolute URL
 baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
@@ -68,7 +68,7 @@ ga_domain: huangxuan.me
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "雅思啊，雅思，世界那么大，我想出去看看！！！"
+sidebar-about-description: "雅思啊，雅思，世界这么大，我想出去看看！！！"
 sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 

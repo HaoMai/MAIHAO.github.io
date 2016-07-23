@@ -1,45 +1,44 @@
 ---
-layout:     post
-title:      "How to use github and jekll to build personal blog"
-subtitle:   "Easy to build blog"
-date:       2016-07-23
-author:     "MAI HAO"
-header-img: "img/post-bg-js-module.jpg"
+layout:     keynote
+title:      "Example Post using Keynote Layout"
+subtitle:   "Keynote: JavaScript Modularization Journey"
+iframe:     "http://huangxuan.me/js-module-7day/"
+date:       2015-07-09
+author:     "Hux"
+header-img: "img/post-bg-js-version.jpg"
 tags:
-    - github
-    - jekyll
+    - 前端开发
+    - JavaScript
 ---
 
 
+> 下滑这里查看更多内容
 
-github在过去的几年里取得了很大的进展。开发者不断的推动Git应用的发展极限。虽说，现在博客对比起朋友圈，略显落后，但仍然有很多愿意折腾的人想着自己搭建一个属于自己的博客。而github就恰恰提供了这个功能。下文就会介绍如何通过github来搭建自己的个人博客
+7月9日，我在公司内部进行了名为「JavaScript 模块化七日谈」分享，并将该 Slides 分享到了微博上。出乎意料地，这篇微博先后被 @JS小组 @尤小右 @寸志 等近 200 人转发，阅读达到 10w，获得了还不错的评价。
 
-* 首先注册github网站的账号<img src="img/firstBlog/01.jpg">
-
-* 然后建立一个仓库<br /><img src="img/firstBlog/02.jpg">
-> Respository name(仓库名)必须是you_user_name.github.io
-
-* 接着仓库实际上已经建好了，但网络上的其他教程都会说需要布置ssh的key。我是直接使用github for window的客户端的，安装成功后再登陆自己的github账号就可以自动生成ssh key了，省去了一大步骤。<a herf="http://windows.github.com/">github for window 安装官网</a><img src="img/firstBlog/03.jpg">
-
-* 然后在网页上选择setting按钮<img src="img/firstBlog/04.jpg"><br />并点击**Launch automatic page generator**按钮，就会跳转到一个页面需要你填入一些信息
-
-* 按照要求，填写你想写的blog资料并点击**Continue to layouts**
-<img src="img/firstBlog/05.jpg">
-
-* 最后选择模板，github就会帮你自动生成一个页面
-<img src="img/firstBlog/06.jpg">
-
-* 此时如果你只满足于这样，其实博客就已经建好了，每一次只需要按照步骤进去修改index.html中的内容就可以的了。但是，这明显与要折腾这一初衷相违背了，我们想要自己去定义layout，想有更多的灵活性。这时候jekyll就是一个不错的选择
-<br /><img src="img/firstBlog/07.jpg">
-
-> <a herf="http://jekyll.bootcss.com/" >jekyll中文官网</a>
-
-* 随便下载一个模板下来，然后把自己的文件全部删掉**（没有看错，全部删掉）**替换为下载下来的模板的文件，大概是这样的：
-<img src="img/firstBlog/08.jpg">
-
-* 把本地文件**commit**和**sync**到服务器上，再登入你的页面，就会变成你下载的模板的样式了。接着就是各路大神自己发挥的时候了。
+于是，我决定将它重新发到我的博客上，并为它专门制作了适用于 Keynote 展示文稿的新布局。它能自动根据屏幕大小/旋转以一定比例填充屏幕，你也可以直接点击下方链接在新页面打开，来获得更好的、沉浸式的全屏体验
 
 
+### [Watch Slides →](http://huangxuan.me/js-module-7day)
+
+<img src="http://huangxuan.me/js-module-7day/attach/qrcode.png" width="350" height="350"/>
+
+<small class="img-hint">你也可以通过扫描二维码在手机上观看</small>
 
 
+这个 Web Slides 开源在[我的 Github 上](https://github.com/Huxpro/js-module-7day)，欢迎你帮助我完善这个展示文稿，你可以给我提 issue，可以 fork & pull request。如果它能帮助到你了，希望你还能不吝啬 star 一下这个项目
 
+
+### Catalog
+
+- 第一日 上古时期 ***Module?*** 从设计模式说起
+- 第二日 石器时代 ***Script Loader*** 只有封装性可不够，我们还需要加载
+- 第三日 蒸汽朋克 ***Module Loader*** 模块化架构的工业革命
+- 第四日 号角吹响 ***CommonJS*** 征服世界的第一步是跳出浏览器
+- 第五日 双塔奇兵 ***AMD/CMD*** 浏览器环境模块化方案
+- 第六日 精灵宝钻 ***Browserify/Webpack*** 大势所趋，去掉这层包裹！
+- 第七日 王者归来 ***ES6 Module*** 最后的战役
+
+### Thanks
+
+[Reveal.js](http://lab.hakim.se/reveal-js)
