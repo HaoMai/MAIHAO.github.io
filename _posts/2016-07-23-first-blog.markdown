@@ -1,4 +1,4 @@
-﻿---
+---
 layout:     post
 title:      "How to use github and jekll to build personal blog"
 subtitle:   "Easy to build blog"
