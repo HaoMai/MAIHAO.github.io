@@ -14,7 +14,8 @@ tags:
 
 github在过去的几年里取得了很大的进展。开发者不断的推动Git应用的发展极限。虽说，现在博客对比起朋友圈，略显落后，但仍然有很多愿意折腾的人想着自己搭建一个属于自己的博客。而github就恰恰提供了这个功能。下文就会介绍如何通过github来搭建自己的个人博客
 
-* 首先注册github网站的账号<img src="/img/firstBlog/01.jpg">
+* 首先注册github网站的账号
+![01](/img/in-post/post-js-version/javascript-java.jpg)
 
 * 然后建立一个仓库<br /><img src="/img/firstBlog/02.jpg">
 > Respository name(仓库名)必须是you_user_name.github.io
