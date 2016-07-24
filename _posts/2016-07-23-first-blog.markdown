@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "How to use github and jekll to build personal blog"
+title:      "使用github和jekyll建造个人博客"
 subtitle:   "Easy to build blog"
 date:       2016-07-23
 author:     "MAI HAO"
