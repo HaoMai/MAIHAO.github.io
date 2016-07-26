@@ -1,0 +1,77 @@
+---
+layout:     post
+title:      "Java的GC机制的算法"
+subtitle:   "详解GC的机制以及其常见的几种算法"
+date:       2016-07-26
+author:     "MAI HAO"
+header-img: "img/post-bg-js-module.jpg"
+tags:
+    - java
+---
+
+## GC的阶段
+
+对每个对象而言，垃圾回收分为两个阶段：finalization和reclamation。
+  * finalization: 指运行这个对象的finalize的方法。
+ 
+  * reclamation: 回收被这个对象使用的内存。
+
+## GC过程的基本步骤
+  * 首先确认对象是不可达的，即将要被回收
+
+  * 如果对象有finalize算法，那么对象添加到finalization queue等待执行
+ 
+  * 最后，回收对象占用的内存
+
+> 关于finalize方法
+  * finalize方法使得GC过程做了更多的事情，增加的GC的负担
+
+  * 如果某个对象的finalize方法运行时间过长，它会使得其他对象的finalize方法被延迟执行
+
+  * finalize方法中如果创建了strong reference引用了其他对象，这会阻止此对象被GC
+
+  * finalize方法有可能以不可确定的顺序执行
+
+  * 不确保finalize方法会被及时调用，也许程序都退出了，但是finalize方法还没被调用
+
+## GC的几种算法
+
+### 引用计数（Reference Counting）
+
+为每一个对象添加一个计数器，计数器记录了对该对象的活跃引用的数量。如果计数器为0，则说明这个对象没有被任何变量所引用，即应该进行垃圾收集。
+
+收集过程如下：
+
+  1. 减少被收集对象所引用的对象的计数器的值
+  2. 将其放入延时收集队列之中
+
+> 此方法未被**JVM**所使用
+
+### 标记-清除收集（Mark-Swap Collectors）
+
+收集过程分为2个阶段
+
+  1. 首先停止所有工作，从根集遍历所有被引用的节点，然后进行标记，最后恢复所有工作
+
+  2. 收集阶段会收集那些没有被标记的节点，然后返回空闲链表
+
+> 标记清除法的缺点在于
+  1. 标记阶段暂停的时间可能很长，而整个堆在交换阶段又是可访问的，可能会导致被换页换出内存
+
+  2. 不管你这个对象是不是可达的，即是不是垃圾，都要在清楚阶段被检查一遍，非常耗时
+
+
+### 拷贝收集器（Copying Collectors）
+
+将内存分为两个区域(from space和to space)。所有的对象分配内存都分配到from space。在清理非活动对象阶段，把所有标志为活动的对象，copy到to space，之后清楚from space空间。然后互换from sapce和to space的身份。既原先的from space变成to sapce，原先的to space变成from space。每次清理，重复上述过程。
+
+### 标记-整理收集器(Mark-Compact Collectors)
+
+标记整理收集器分为2个阶段
+  1. 标记阶段， 这个阶段和标记-清除收集器的标记阶段相同
+
+  2. 整理阶段， 这个阶段将所有做了标记的活动对象整理到堆的底部
+
+### 分代（generational collection）
+
+新生代（Minor GC）使用Mark-Swap算法，旧生代（Major GC）使用Mark-SwapMark-Swap算法
