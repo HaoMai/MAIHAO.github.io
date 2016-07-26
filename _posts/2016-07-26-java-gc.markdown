@@ -12,6 +12,7 @@ tags:
 ## GC的阶段
 
 对每个对象而言，垃圾回收分为两个阶段：finalization和reclamation。
+
   * finalization: 指运行这个对象的finalize的方法。
  
   * reclamation: 回收被这个对象使用的内存。
@@ -68,6 +69,7 @@ tags:
 ### 标记-整理收集器(Mark-Compact Collectors)
 
 标记整理收集器分为2个阶段
+
   1. 标记阶段， 这个阶段和标记-清除收集器的标记阶段相同
 
   2. 整理阶段， 这个阶段将所有做了标记的活动对象整理到堆的底部
